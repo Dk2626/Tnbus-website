@@ -1,0 +1,33 @@
+.AdminMainForm {
+  text-align: center;
+}
+.AdminMain {
+  display: flex;
+  justify-content: space-between;
+}
+.AdminMain1 {
+  width: 60%;
+}
+.AdminMain2 {
+  width: 35%;
+}
+.timeMain {
+  display: flex;
+  flex-wrap: wrap;
+}
+.timeMainSub {
+  padding: 10px;
+}
+.timeMainSub h4 {
+  margin: 0;
+}
+.time {
+  cursor: pointer;
+}
+.submit {
+  background-color: #1b98f5;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+}

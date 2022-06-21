@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import AdminScreen from './Screens/AdminScreen';
+import LoginScreen from './Screens/LoginScreen';
+import SearchScreen from './Screens/SearchScreen';
+import UserScreen from './Screens/UserScreen';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [isLogin, setIsLogin] = useState(true);
+
+  if (isLogin === false) {
+    return <LoginScreen />;
+  } else
+    return (
+      <Routes>
+        <Route path='/' element={<SearchScreen />} />
+        <Route path='user' element={<UserScreen />} />
+        <Route path='admin' element={<AdminScreen />} />
+      </Routes>
+    );
+};
 
 export default App;
