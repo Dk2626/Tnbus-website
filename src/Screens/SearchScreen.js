@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar';
 import { database } from '../firebase';
 import './SearchScreen.css';
+import { Link } from 'react-scroll';
 
 const SearchScreen = () => {
   const [busDatas, setBusDatas] = useState('');
@@ -61,7 +64,7 @@ const SearchScreen = () => {
     let initialData = [];
     if (busDatas.length > 0) {
       busDatas.forEach((busData) => {
-        if (busData.origin == originPicked) {
+        if (busData.origin === originPicked) {
           initialData.push(busData.destination);
         }
       });
@@ -77,8 +80,8 @@ const SearchScreen = () => {
     if (busDatas.length > 0) {
       busDatas.forEach((busData) => {
         if (
-          busData.origin == originPicked &&
-          busData.destination == destinaitonPicked
+          busData.origin === originPicked &&
+          busData.destination === destinaitonPicked
         ) {
           initialData.push(busData);
         }
@@ -92,106 +95,132 @@ const SearchScreen = () => {
   // }, []);
 
   return (
-    <div className='main'>
-      <h1 className='headMain'>TN Moffusil Bus Search</h1>
-      <div className='mainOrigin'>
-        <label>Origin</label>
-        {finalOrigin.length > 0 ? (
-          <div>
-            <select
-              value={originPicked}
-              onChange={(e) => setOriginPicked(e.target.value)}>
-              {originPicked == '' && <option>Select Origin</option>}
-              {finalOrigin.map((origin, i) => {
-                return (
-                  <option value={origin} key={i}>
-                    {origin}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-        ) : (
-          <div>
-            <select>
-              <option>Select Origin</option>
-            </select>
-          </div>
-        )}
+    <>
+      <Navbar />
+      <div className='Homemain'>
+        <h1 className='HomemainH'>TN Bus Report</h1>
+        <Link
+          className='HomemainL'
+          activeClass='active'
+          to='detail'
+          smooth={true}
+          duration={500}
+          offset={50}>
+          <button className='HomemainB'>Explore</button>
+        </Link>
       </div>
-      <div className='mainOrigin'>
-        <label>Destination</label>
-        {finalDestinaiton.length > 0 ? (
-          <div>
-            <select
-              value={destinaitonPicked}
-              onChange={(e) => setDestinaitonPicked(e.target.value)}>
-              {destinaitonPicked == '' && <option>Select Destination</option>}
-              {finalDestinaiton.map((destinaiton, i) => {
-                return (
-                  <option value={destinaiton} key={i}>
-                    {destinaiton}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-        ) : (
-          <div>
-            <select>
-              <option>Select Destination</option>
-            </select>
-          </div>
-        )}
+      <div className='detail'>
+        <p>
+          This site is mainly used for searching the Tamil nadu Moffusil bus,
+          people can reach their destination easy by searching own destination.
+          This also give how many city that bus can go they can validate from
+          searching the origin and desitination.
+        </p>
       </div>
-      <div>
-        <button
-          onClick={getFinalData}
-          className={
-            !originPicked || !destinaitonPicked ? 'desBtn' : 'serchBtn'
-          }
-          disabled={!originPicked || !destinaitonPicked}>
-          Search
-        </button>
-      </div>
-      {finalData.length > 0 && (
-        <div className='finalDataMain'>
-          {finalData.map((item) => {
-            const { origin, destination, busType, timings } = item;
-            return (
-              <div>
-                {timings.length > 0 && (
-                  <>
-                    {timings.map((time) => {
-                      return (
-                        <div className='finalData'>
-                          <div>
-                            <label>Origin: </label>
-                            <label>{origin}</label>
-                          </div>
-                          <div>
-                            <label>Destination: </label>
-                            <label>{destination}</label>
-                          </div>
-                          <div>
-                            <label>Bus Type: </label>
-                            <label>{busType}</label>
-                          </div>
-                          <div>
-                            <label>Time: </label>
-                            <label>{time.data}</label>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </>
-                )}
-              </div>
-            );
-          })}
+      <div className='main'>
+        <h1 className='headMain'>Search Here</h1>
+        <div className='mainOrigin'>
+          <label>Origin</label>
+          {finalOrigin.length > 0 ? (
+            <div>
+              <select
+                value={originPicked}
+                onChange={(e) => setOriginPicked(e.target.value)}>
+                {originPicked === '' && <option>Select Origin</option>}
+                {finalOrigin.map((origin, i) => {
+                  return (
+                    <option value={origin} key={i}>
+                      {origin}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+          ) : (
+            <div>
+              <select>
+                <option>Select Origin</option>
+              </select>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+        <div className='mainOrigin'>
+          <label>Destination</label>
+          {finalDestinaiton.length > 0 ? (
+            <div>
+              <select
+                value={destinaitonPicked}
+                onChange={(e) => setDestinaitonPicked(e.target.value)}>
+                {destinaitonPicked === '' && (
+                  <option>Select Destination</option>
+                )}
+                {finalDestinaiton.map((destinaiton, i) => {
+                  return (
+                    <option value={destinaiton} key={i}>
+                      {destinaiton}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+          ) : (
+            <div>
+              <select>
+                <option>Select Destination</option>
+              </select>
+            </div>
+          )}
+        </div>
+        <div>
+          <button
+            onClick={getFinalData}
+            className={
+              !originPicked || !destinaitonPicked ? 'desBtn' : 'serchBtn'
+            }
+            disabled={!originPicked || !destinaitonPicked}>
+            Search
+          </button>
+        </div>
+        {finalData.length > 0 && (
+          <div className='finalDataMain'>
+            {finalData.map((item) => {
+              const { origin, destination, busType, timings } = item;
+              return (
+                <div>
+                  {timings.length > 0 && (
+                    <>
+                      {timings.map((time) => {
+                        return (
+                          <div className='finalData'>
+                            <div>
+                              <label>Origin: </label>
+                              <label>{origin}</label>
+                            </div>
+                            <div>
+                              <label>Destination: </label>
+                              <label>{destination}</label>
+                            </div>
+                            <div>
+                              <label>Bus Type: </label>
+                              <label>{busType}</label>
+                            </div>
+                            <div>
+                              <label>Time: </label>
+                              <label>{time.data}</label>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+      <Footer />
+    </>
   );
 };
 

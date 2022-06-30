@@ -1,0 +1,53 @@
+.Footmain {
+  background-color: #000;
+  padding: 20px;
+}
+.navMains {
+  border-bottom: 1px solid #696e7d;
+  padding-bottom: 15px;
+}
+.footDetails {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0px;
+}
+.cont p {
+  color: #696e7d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.footlabel1 {
+  color: #fff;
+  font-family: 'Andika';
+}
+.footlabel2 {
+  color: #ff7f00;
+  font-family: 'Andika';
+}
+.storeContent p {
+  color: #fff;
+  font-family: 'Andika';
+  margin-bottom: 10px;
+}
+.copyrights p {
+  margin: 15px 10px 0 10px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #696e7d;
+  font-size: 14px;
+}
+.copyrights span {
+  color: #ff7f00;
+  font-size: 14px;
+}
+.playStore {
+  width: 180px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.playStore img {
+  width: 100%;
+  height: 100%;
+}

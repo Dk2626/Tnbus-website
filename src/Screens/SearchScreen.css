@@ -1,10 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&display=swap');
+
+.Homemain {
+  background-image: url('../Assests/homeImg.jpg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Homemain::after {
+  height: 100vh;
+  opacity: 0.8;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+}
+.HomemainH {
+  color: #ff7f00;
+  z-index: 1;
+  font-family: 'Andika';
+  font-size: 50px;
+}
+.HomemainL {
+  z-index: 1;
+}
+.HomemainB {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  color: #ff7f00;
+  border-radius: 10px;
+  font-weight: 800;
+}
+.detail {
+  text-align: center;
+  background-color: #e07c24;
+  width: 60%;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 10px;
+}
+.detail p {
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 30px;
+}
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .headMain {
-  color: #1b98f5;
+  color: #ff7f00;
+  font-family: 'Andika';
 }
 .mainOrigin {
   width: 30%;
@@ -16,7 +76,7 @@
 .mainOrigin label {
   align-self: flex-start;
   margin-bottom: 10px;
-  color: #1b98f5;
+  color: #ff7f00;
   font-weight: 600;
   font-size: 20px;
 }
@@ -24,14 +84,14 @@
   width: 400px;
   outline: none;
   border: none;
-  border: 1px solid #1b98f5;
+  border: 1px solid #ff7f00;
   padding: 10px 0;
   border-radius: 10px;
 }
 .serchBtn {
   border: none;
   outline: none;
-  background-color: #1b98f5;
+  background-color: #ff7f00;
   padding: 10px;
   border-radius: 10px;
   color: white;
@@ -50,7 +110,7 @@
   width: 30%;
 }
 .finalData {
-  background-color: #1b98f5;
+  background-color: #e07c24;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;

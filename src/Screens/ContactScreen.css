@@ -1,0 +1,155 @@
+.Contactmain {
+  background-image: url('../Assests/contactImg.jpg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.Contactmain::after {
+  height: 100vh;
+  opacity: 0.3;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+}
+.ContactmainH {
+  margin-bottom: 30px;
+  color: #ff7f00;
+  z-index: 1;
+}
+.address {
+  padding: 70px 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.add {
+  width: 30%;
+  /* background-color: rgba(0, 0, 0, 0.05); */
+  background-color: #cad5e2;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px;
+  border-radius: 10px;
+}
+.connect {
+  color: #ff7f00;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'andika';
+  margin-bottom: 10px;
+}
+p.locate {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'andika';
+}
+.contact_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.contact_info .box {
+  background: rgba(0, 0, 0, 0.8);
+  width: 500px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.box h2 {
+  color: #ff7f00;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'newyorklargeblack';
+}
+.box .inputBox {
+  position: relative;
+}
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+}
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+  font-family: 'andika';
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ff7f00;
+  font-size: 14px;
+  font-family: 'andika';
+}
+.box .inputBox textarea:focus ~ label,
+.box .inputBox textarea:valid ~ label {
+  top: -40px;
+  left: 0;
+  color: #ff7f00;
+  font-size: 14px;
+  margin-top: 10px;
+  font-family: 'andika';
+}
+.box textarea {
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+}
+.bt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff7f00;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #ff7f00;
+  font-weight: 500;
+  font-family: 'andika';
+}
+
+.bt:hover {
+  color: #ff7f00;
+  background: #fff;
+  transition: 0.5s;
+  font-family: 'andika';
+}
