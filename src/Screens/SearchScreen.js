@@ -13,8 +13,7 @@ const SearchScreen = () => {
   const [finalDestinaiton, setFinalDestination] = useState('');
   const [destinaitonPicked, setDestinaitonPicked] = useState('');
   const [finalData, setFinalData] = useState('');
-
-  console.log('finalData', finalData);
+  const [topBusData, setTopBusData] = useState('');
 
   const getBusData = () => {
     let initialData = [];
@@ -90,9 +89,21 @@ const SearchScreen = () => {
     }
   };
 
-  // useEffect(() => {
-  //   getFinalData();
-  // }, []);
+  const getTopDestData = () => {
+    let initialData = [];
+    database.ref('originDest').on('value', (data) => {
+      data.forEach((data) => {
+        if (data.val().origin === 'Chennai') {
+          initialData.push(data.val());
+        }
+      });
+      setTopBusData(initialData);
+    });
+  };
+
+  useEffect(() => {
+    getTopDestData();
+  }, []);
 
   return (
     <>
@@ -188,7 +199,7 @@ const SearchScreen = () => {
               return (
                 <div>
                   {timings.length > 0 && (
-                    <>
+                    <div className='finalDataMainSub'>
                       {timings.map((time) => {
                         return (
                           <div className='finalData'>
@@ -211,7 +222,47 @@ const SearchScreen = () => {
                           </div>
                         );
                       })}
-                    </>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+      <div className='main2'>
+        <h1>Top Origin & Destination</h1>
+        {topBusData.length > 0 && (
+          <div className='finalDataMain'>
+            {topBusData.map((item) => {
+              const { origin, destination, busType, timings } = item;
+              return (
+                <div>
+                  {timings.length > 0 && (
+                    <div className='finalDataMainSub'>
+                      {timings.map((time) => {
+                        return (
+                          <div className='finalData'>
+                            <div>
+                              <label>Origin: </label>
+                              <label>{origin}</label>
+                            </div>
+                            <div>
+                              <label>Destination: </label>
+                              <label>{destination}</label>
+                            </div>
+                            <div>
+                              <label>Bus Type: </label>
+                              <label>{busType}</label>
+                            </div>
+                            <div>
+                              <label>Time: </label>
+                              <label>{time.data}</label>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   )}
                 </div>
               );

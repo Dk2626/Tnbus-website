@@ -61,6 +61,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1.5px solid #000;
+}
+.main2 {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+.main2 h1 {
+  font-family: 'Andika';
+  margin: 20px 0px;
 }
 .headMain {
   color: #ff7f00;
@@ -107,13 +117,19 @@
   margin: 20px;
 }
 .finalDataMain {
-  width: 30%;
+  margin-bottom: 20px;
+}
+.finalDataMainSub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .finalData {
-  background-color: #e07c24;
-  padding: 10px;
+  background-color: #ff7f00;
+  padding: 10px 20px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 .finalData label {
   color: white;
