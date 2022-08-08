@@ -54,12 +54,12 @@
 }
 .quizVertLine2 {
   background-color: #d2e8fa;
-  height: 300px;
-  width: 1.5px;
+  height: 350px;
+  width: 2px;
 }
 .quizArrowMain1 {
   background-color: #5dadec;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 .quizArrow1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 900;
   color: #000000;
 }
@@ -111,6 +111,17 @@
   align-items: center;
 }
 .Storequiz {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+  border-radius: 20px;
+  width: 120px;
+  border: 1px solid #000000;
+}
+.Storequizz {
   background-color: #0c247b;
   display: flex;
   flex-direction: column;
@@ -131,22 +142,56 @@
   border-radius: 20px;
   border: 1px solid #000000;
 }
+.Contestquizz {
+  background-color: #0c247b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+  width: 120px;
+  border-radius: 20px;
+}
 .storeIcon {
-  color: #ffffff;
-  font-size: 40px;
+  color: #000000;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.storeIconn {
+  color: #fff;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 .contestIcon {
-  font-size: 40px;
+  color: #000000;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.contestIconn {
+  color: #fff;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 .storeName {
-  color: #ffffff;
+  color: #000000;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.storeNamee {
+  color: #fff;
   font-family: 'League Spartan', sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
 .contestName {
+  color: #000000;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.contestNamee {
+  color: #fff;
   font-family: 'League Spartan', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -189,7 +234,7 @@
 }
 .quizArrowMain0 {
   background-color: #0c247b;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,7 +244,7 @@
 }
 .quizArrowMain2 {
   background-color: #0c247b;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,7 +252,7 @@
   cursor: pointer;
 }
 .quizArrow2 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 900;
   color: #ffffff;
 }
@@ -242,12 +287,12 @@
 }
 .quizVertLine3 {
   background-color: #d2e8fa;
-  height: 150px;
-  width: 1.5px;
+  height: 200px;
+  width: 2px;
 }
 .quizVertLine4 {
   background-color: #d2e8fa;
-  height: 380px;
+  height: 420px;
   width: 2px;
 }
 .kuttyPara1 {
@@ -255,16 +300,18 @@
   font-size: 28px;
   color: #0c247b;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .kuttyPara2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: bold;
   text-align: justify;
+  margin-bottom: 20px;
 }
 .quizArrowMain3 {
   background-color: #2bb826;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,19 +319,21 @@
   cursor: pointer;
 }
 .quizArrow3 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 900;
   color: #000000;
 }
 .certtImg {
-  height: 90px;
-  width: 280px;
-  padding-left: 10px;
+  height: 70px;
+  padding-left: 20px;
   align-self: flex-start;
 }
 .certtImg img {
-  width: 100%;
   height: 100%;
+}
+.countImg {
+  width: 164px;
+  height: 140px;
 }
 .quizPg4Main {
   display: flex;
@@ -304,7 +353,7 @@
   background-color: #62c273;
   align-items: center;
   justify-content: space-evenly;
-  width: 260px;
+  width: 300px;
   padding: 20px 0px;
   border-radius: 20px;
 }
@@ -332,9 +381,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 30px 28px;
   border-radius: 10px;
-  margin: 10px 5px;
+  margin: 15px 5px;
 }
 .catQuizz1SubI {
   background-color: #9d3be1;
@@ -388,6 +437,7 @@
   font-weight: 600;
   font-size: 20px;
   width: 250px;
+  margin-bottom: 5px;
 }
 .quizHoriLine {
   background-color: #d2e8fa;
@@ -395,18 +445,32 @@
   width: 250px;
 }
 .aniLogo {
+  width: 150px;
+  height: 100px;
+}
+.aniLogo img {
+  width: 100%;
+  height: 100%;
+}
+.aniLogoTitle {
+  width: 200px;
+  height: 78px;
   animation-name: logo;
   animation-duration: 4s;
 }
+.aniLogoTitle img {
+  width: 100%;
+  height: 100%;
+}
 @keyframes logo {
   0% {
-    padding-bottom: 60px;
+    margin-top: 80px;
   }
   50% {
-    padding-bottom: 30px;
+    margin-top: 30px;
   }
   100% {
-    padding-bottom: 0px;
+    margin-top: 0px;
   }
 }
 .celebsImg__Main {
@@ -418,7 +482,7 @@
   border-radius: 20px;
   overflow: hidden;
   border: 1.5px solid #0c247b;
-  margin: 10px;
+  margin: 20px;
 }
 .celebsImg img {
   width: 100%;
@@ -426,11 +490,15 @@
 }
 .instasll {
   align-self: flex-start;
-  padding-left: 30px;
+  padding-left: 25px;
+}
+.intImgs {
+  width: 250px;
+  height: 75px;
 }
 .instafImg {
   width: 250px;
-  height: 300px;
+  height: 350px;
 }
 .quizPg8 {
   background-color: #ffffff;
@@ -440,6 +508,11 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+}
+.yesnoQM {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .yesnoQ {
   display: flex;
@@ -456,6 +529,52 @@
   justify-content: center;
   margin: 20px;
 }
+.yesnoQRR {
+  border-radius: 10px;
+  width: 120px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  background-color: #0c247b;
+}
+.yesnoQR img {
+  width: 80px;
+  height: 65px;
+}
+.yesnoQRR img {
+  width: 80px;
+  height: 65px;
+}
+.yesnoQRN {
+  border-radius: 10px;
+  border: 1.5px solid black;
+  width: 120px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.yesnoQRNN {
+  border-radius: 10px;
+  background-color: #0c247b;
+  width: 120px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.yesnoQRN img {
+  width: 80px;
+  height: 65px;
+}
+.yesnoQRNN img {
+  width: 80px;
+  height: 65px;
+}
 .njoyBtn {
   background-color: #0c247b;
   border-radius: 40px;
@@ -466,4 +585,98 @@
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   font-weight: 700;
+}
+.njoyyImg {
+  width: 240px;
+  height: 245px;
+}
+.quizPg9Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quizPg9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #000000;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 20px 10px;
+}
+
+.luckyHello {
+  color: #0c247b;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.luckyHelloIn {
+  color: #0c247b;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.luckyyInputMa {
+  border: 1px solid #000000;
+  padding: 10px;
+  border-radius: 30px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.luckyyInput {
+  border: none;
+  outline: none;
+  width: 85%;
+}
+.luckyyInput::placeholder {
+  color: #d9d9d9;
+  font-size: 14px;
+}
+.luckydrawIcon {
+  color: #d9d9d9;
+}
+.luckySubmit {
+  background-color: #0c247b;
+  padding: 10px;
+  width: 350px;
+  border-radius: 30px;
+  text-align: center;
+}
+.luckySubmit p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+.genderLucky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feeimg {
+  width: 30px;
+  height: 50px;
+}
+.genderLuckySub1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.genderLuckySub1 p {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #0c247b;
+  border-color: #0c247b;
 }

@@ -3,43 +3,54 @@ import './Quiz.css';
 import '../../Fonts/Fonts.css';
 import { BsArrowRight } from 'react-icons/bs';
 import { FiSend } from 'react-icons/fi';
-import { FaStoreAlt } from 'react-icons/fa';
-import { GrTrophy } from 'react-icons/gr';
-import { BsBook, BsStarFill } from 'react-icons/bs';
-import { MdExitToApp } from 'react-icons/md';
+import { FaStoreAlt, FaMobileAlt } from 'react-icons/fa';
+import { BsBook, BsStarFill, BsTrophy, BsPerson } from 'react-icons/bs';
+import { MdExitToApp, MdEmail } from 'react-icons/md';
 import { ImBook } from 'react-icons/im';
-import cert from '../../Assests/Quiz/certi.png';
-import countriess from '../../Assests/Quiz/18countries.png';
+import cert from '../../Assests/Quiz/cert.png';
+import countriess from '../../Assests/Quiz/18count.png';
 import islandIcon from '../../Assests/Quiz/islandIcon.png';
 import logo from '../../Assests/Quiz/logo.png';
-import logotitle from '../../Assests/Quiz/logotitle.png';
+import logotitle from '../../Assests/Quiz/logot.png';
 import celeb1 from '../../Assests/Quiz/celeb1.JPG';
 import celeb2 from '../../Assests/Quiz/celeb2.JPG';
 import celeb3 from '../../Assests/Quiz/celeb3.JPG';
 import celeb4 from '../../Assests/Quiz/celeb4.JPG';
-import insta from '../../Assests/Quiz/insta.png';
-import instaf from '../../Assests/Quiz/instaf.png';
-import yesl from '../../Assests/Quiz/yesl.png';
-import nol from '../../Assests/Quiz/nol.png';
-import njoy from '../../Assests/Quiz/njoy.png';
+import insta from '../../Assests/Quiz/int.png';
+import instaf from '../../Assests/Quiz/intf.png';
+import yesl from '../../Assests/Quiz/yyes.png';
+import nol from '../../Assests/Quiz/nno.png';
+import njoy from '../../Assests/Quiz/njoyy.png';
+import male from '../../Assests/Quiz/male.png';
+import female from '../../Assests/Quiz/female.png';
 
 const Quiz = () => {
-  const [step, setstep] = useState(1);
+  const [step, setStep] = useState(1);
+  const [store, setStore] = useState('');
+  const [lucky, setLucky] = useState('');
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    gender: '',
+    opting: '',
+  });
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setstep(step + 1);
-  //   }, 3000);
-  // }, [step == 1]);
+  const { name, email, phone, gender, opting } = user;
+  console.log('user', user);
 
   const renderPage = () => {
     switch (step) {
       case 1:
         return (
           <div className='quizPg0'>
-            <img src={logo} alt='logo' className='aniLogo' />
-            <img src={logotitle} alt='logotitle' />
-            <div className='quizArrowMain0' onClick={() => setstep(step + 1)}>
+            <div className='aniLogo'>
+              <img src={logo} alt='logo' />
+            </div>
+            <div className='aniLogoTitle'>
+              <img src={logotitle} alt='logotitle' />
+            </div>
+            <div className='quizArrowMain0' onClick={() => setStep(step + 1)}>
               <BsArrowRight className='quizArrow2' />
             </div>
           </div>
@@ -50,7 +61,7 @@ const Quiz = () => {
             <div className='quizTitle1'>Hello</div>
             <div className='quizTitle2'>traveller</div>
             <div className='quizVertLine1' />
-            <div className='quizArrowMain1' onClick={() => setstep(step + 1)}>
+            <div className='quizArrowMain1' onClick={() => setStep(step + 1)}>
               <BsArrowRight className='quizArrow1' />
             </div>
           </div>
@@ -65,9 +76,16 @@ const Quiz = () => {
             <div className='quizPg2SubM'>
               <div className='quizPg2Sub'>
                 <div className='quizPg2SubL'>
-                  <div className='Storequiz'>
-                    <FaStoreAlt className='storeIcon' />
-                    <div className='storeName'>Store</div>
+                  <div
+                    className={store == 'Store' ? 'Storequizz' : 'Storequiz'}
+                    onClick={() => setStore('Store')}>
+                    <FaStoreAlt
+                      className={store == 'Store' ? 'storeIconn' : 'storeIcon'}
+                    />
+                    <div
+                      className={store == 'Store' ? 'storeNamee' : 'storeName'}>
+                      Store
+                    </div>
                   </div>
                   <div className='knowaboutp'>
                     <p className='knowaboutq'>Know about us in 6 Pages</p>
@@ -76,9 +94,22 @@ const Quiz = () => {
                 </div>
                 <div className='quizVertLine2' />
                 <div className='quizPg2SubLB'>
-                  <div className='Contestquiz'>
-                    <GrTrophy className='contestIcon' />
-                    <div className='contestName'>Contest</div>
+                  <div
+                    className={
+                      store == 'Contest' ? 'Contestquizz' : 'Contestquiz'
+                    }
+                    onClick={() => setStore('Contest')}>
+                    <BsTrophy
+                      className={
+                        store == 'Contest' ? 'contestIconn' : 'contestIcon'
+                      }
+                    />
+                    <div
+                      className={
+                        store == 'Contest' ? 'contestNamee' : 'contestName'
+                      }>
+                      Contest
+                    </div>
                   </div>
                   <div className='win2nights'>
                     <p className='win2nightsq'>
@@ -92,7 +123,16 @@ const Quiz = () => {
                   </div>
                 </div>
               </div>
-              <div className='quizArrowMain2' onClick={() => setstep(step + 1)}>
+              <div
+                className='quizArrowMain2'
+                onClick={() => {
+                  if (store == 'Store') {
+                    setStep(step + 1);
+                  }
+                  if (store == 'Contest') {
+                    setStep(10);
+                  }
+                }}>
                 <BsArrowRight className='quizArrow2' />
               </div>
             </div>
@@ -115,7 +155,7 @@ const Quiz = () => {
               <p className='kuttyPara2'>Have a new beginning with us!</p>
             </div>
             <div className='quizVertLine3' />
-            <div className='quizArrowMain3' onClick={() => setstep(step + 1)}>
+            <div className='quizArrowMain3' onClick={() => setStep(step + 1)}>
               <BsArrowRight className='quizArrow3' />
             </div>
           </div>
@@ -127,9 +167,9 @@ const Quiz = () => {
               <img src={cert} alt='cert' />
             </div>
             <div className='quizPg4Main'>
-              <img src={countriess} alt='18countries' />
+              <img src={countriess} alt='18countries' className='countImg' />
               <div className='quizVertLine3' />
-              <div className='quizArrowMain2' onClick={() => setstep(step + 1)}>
+              <div className='quizArrowMain2' onClick={() => setStep(step + 1)}>
                 <BsArrowRight className='quizArrow2' />
               </div>
             </div>
@@ -194,7 +234,7 @@ const Quiz = () => {
                 </div>
               </div>
             </div>
-            <div className='quizArrowMain2' onClick={() => setstep(step + 1)}>
+            <div className='quizArrowMain2' onClick={() => setStep(step + 1)}>
               <BsArrowRight className='quizArrow2' />
             </div>
           </div>
@@ -224,7 +264,7 @@ const Quiz = () => {
                 </div>
               </div>
             </div>
-            <div className='quizArrowMain2' onClick={() => setstep(step + 1)}>
+            <div className='quizArrowMain2' onClick={() => setStep(step + 1)}>
               <BsArrowRight className='quizArrow2' />
             </div>
           </div>
@@ -233,13 +273,12 @@ const Quiz = () => {
         return (
           <div className='quizPg8'>
             <div className='instasll'>
-              <img src={insta} alt='insta' />
-              <div className='quizHoriLine' />
+              <img src={insta} alt='insta' className='intImgs' />
             </div>
             <div>
               <img src={instaf} alt='instf' className='instafImg' />
             </div>
-            <div className='quizArrowMain2' onClick={() => setstep(step + 1)}>
+            <div className='quizArrowMain2' onClick={() => setStep(step + 1)}>
               <BsArrowRight className='quizArrow2' />
             </div>
           </div>
@@ -251,28 +290,100 @@ const Quiz = () => {
               <p>Willing to opt for the Lucky Draw ?</p>
               <div className='quizHoriLine' />
             </div>
-            <div className='yesnoQ'>
-              <div className='yesnoQR' onClick={() => setstep(step + 1)}>
-                <img src={yesl} alt='yesl' />
+            <div className='yesnoQM'>
+              <div className='yesnoQ'>
+                <div
+                  className={lucky == 'yes' ? 'yesnoQRR' : 'yesnoQR'}
+                  onClick={() => setLucky('yes')}>
+                  <img src={yesl} alt='yesl' />
+                </div>
+                <div className='quizVertLine4' />
+                <div
+                  className={lucky == 'no' ? 'yesnoQRNN' : 'yesnoQRN'}
+                  onClick={() => setLucky('no')}>
+                  <img src={nol} alt='nol' />
+                </div>
               </div>
-              <div className='quizVertLine4' />
-              <div className='yesnoQR' onClick={() => setstep(step + 2)}>
-                <img src={nol} alt='nol' />
+              <div
+                className='quizArrowMain2'
+                onClick={() => {
+                  if (lucky == 'yes') {
+                    setStep(step + 1);
+                  }
+                  if (lucky == 'no') {
+                    setStep(step + 2);
+                  }
+                }}>
+                <BsArrowRight className='quizArrow2' />
               </div>
             </div>
           </div>
         );
       case 10:
         return (
-          <div>
-            <div>User detail form</div>
+          <div className='quizPg9Main'>
+            <div className='quizPg9'>
+              <div>
+                <p className='luckyHello'>Hello Traveller!</p>
+                <p className='luckyHelloIn'>
+                  This information will help us to connect with you if you're
+                  winning the lucky draw
+                </p>
+              </div>
+              <div>
+                <div className='luckyyInputMa'>
+                  <input
+                    type='text'
+                    className='luckyyInput'
+                    placeholder='Full Name'
+                  />
+                  <BsPerson className='luckydrawIcon' />
+                </div>
+                <div className='luckyyInputMa'>
+                  <input
+                    type='text'
+                    className='luckyyInput'
+                    placeholder='Email ID'
+                  />
+                  <MdEmail className='luckydrawIcon' />
+                </div>
+                <div className='luckyyInputMa'>
+                  <input
+                    type='text'
+                    className='luckyyInput'
+                    placeholder='Phone number'
+                  />
+                  <FaMobileAlt className='luckydrawIcon' />
+                </div>
+              </div>
+              <div className='genderLucky'>
+                <div className='genderLuckySub1'>
+                  <p>Female</p>
+                  <img src={female} alt='female' className='feeimg' />
+                </div>
+                <div className='genderLuckySub1'>
+                  <p>Male</p>
+                  <img src={male} alt='male' className='feeimg' />
+                </div>
+                <div className='genderLuckySub1'>
+                  <p>I'm Opting for</p>
+                  <div>dsf</div>
+                </div>
+              </div>
+              <div className='luckySubmit'>
+                <p>Submit</p>
+              </div>
+            </div>
+            <div>
+              <p>Privacy protected</p>
+            </div>
           </div>
         );
       case 11:
         return (
           <div className='quizPg8'>
             <div>
-              <img src={njoy} alt='njoy' />
+              <img src={njoy} alt='njoy' className='njoyyImg' />
             </div>
             <div className='njoyBtn'>
               <p>Click here to Visit our Website</p>
@@ -280,7 +391,7 @@ const Quiz = () => {
           </div>
         );
       default:
-        setstep(1);
+        setStep(1);
     }
   };
 
@@ -292,9 +403,9 @@ const Quiz = () => {
             className='prevquiz'
             onClick={() => {
               if (step == 11) {
-                setstep(step - 2);
+                setStep(step - 2);
               } else {
-                setstep(step - 1);
+                setStep(step - 1);
               }
             }}
           />
