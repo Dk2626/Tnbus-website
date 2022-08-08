@@ -211,9 +211,7 @@
   font-weight: 900;
   color: #ffffff;
 }
-.quizSendMainD {
-  position: absolute;
-}
+
 .quizPg3Main {
   display: flex;
   flex-direction: column;
@@ -221,18 +219,20 @@
   justify-content: center;
   padding: 60px 20px;
 }
+.quizSendMainD {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
 .prevquiz {
   transform: rotate(180deg);
   font-size: 28px;
-  position: absolute;
-  left: 30px;
-  top: 20px;
 }
 .quizSend {
   font-size: 28px;
-  position: absolute;
-  left: 300px;
-  top: 20px;
 }
 .kuttyPara {
   background-color: #8ed98c;
