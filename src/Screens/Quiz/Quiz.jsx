@@ -74,6 +74,7 @@ const Quiz = () => {
   var cTime;
 
   const submitForm = () => {
+    console.log('sdf');
     let end = new Date();
     firedb
       .ref('quizcomp')
