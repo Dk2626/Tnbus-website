@@ -9,6 +9,7 @@ import UserScreen from './Screens/UserScreen';
 import './App.css';
 import ScrollToTop from './ScrolltoTop';
 import QuizScreen from './Screens/Quiz/Quiz';
+import HScreen from './Screens/HScreen';
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -19,11 +20,12 @@ const App = () => {
     return (
       <ScrollToTop>
         <Routes>
-          <Route path='/' element={<SearchScreen />} />
-          <Route path='about' element={<AboutScreen />} />
-          <Route path='contact' element={<ContactScreen />} />
-          <Route path='user' element={<UserScreen />} />
-          <Route path='admin' element={<AdminScreen />} />
+          <Route path='/' element={<HScreen />} />
+          {/* <Route path='/' element={<SearchScreen />} /> */}
+          {/* <Route path='about' element={<AboutScreen />} /> */}
+          {/* <Route path='contact' element={<ContactScreen />} /> */}
+          {/* <Route path='user' element={<UserScreen />} /> */}
+          {/* <Route path='admin' element={<AdminScreen />} /> */}
           <Route path='quiz-win-prize' element={<QuizScreen />} />
         </Routes>
       </ScrollToTop>
