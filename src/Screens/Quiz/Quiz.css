@@ -706,6 +706,19 @@
   width: 350px;
   border-radius: 30px;
   text-align: center;
+  /* margin-top: 20px; */
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.luckySubmitBtnn {
+  background-color: #0c247b;
+  padding: 10px;
+  width: 350px;
+  border-radius: 30px;
+  text-align: center;
   margin-top: 20px;
   border: none;
   outline: none;
@@ -816,7 +829,7 @@
 }
 .luckyProtect {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 .luckyProtect p {
@@ -926,6 +939,21 @@
   transform: translate(-50%, -50%);
   border-radius: 3px;
 }
+.quizPopup_contentResort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 30%;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
 .quizPopup_para {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -964,6 +992,257 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.quizPopup__content-ResortShare {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
 .njoyBtnLink {
   text-decoration: none;
+}
+.quiz-req p {
+  margin: 15px 0;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: red;
+  font-weight: bold;
+}
+.letsBeginRes {
+  background-color: #fddea0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid gray;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.letsBeginRespara {
+  font-family: 'League Spartan', sans-serif;
+  color: #16375f;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.letsBeginRescraftImg {
+  width: 100px;
+  height: 100px;
+}
+.quixExploreImg {
+  width: 350px;
+  height: 280px;
+}
+.quixExplorePara1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #000000;
+  font-size: 26px;
+  width: 300px;
+}
+.quixExplorePara2 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+  color: #000000;
+  font-size: 12px;
+}
+.quixExploreBtn,
+.quixDestniBtn {
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  background-color: #6d6d6d;
+  padding: 10px;
+  border-radius: 10px;
+}
+.quixExploreBtnTxt1 {
+  margin-bottom: 0;
+  background-color: #67e0f1;
+  padding: 15px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.quixExploreBtnTxt2,
+.quixDestniBtnTxt2 {
+  margin-bottom: 0;
+  color: #feffff;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.quixDestniImg {
+  width: 250px;
+  height: 250px;
+}
+.quixDestniPara1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #000000;
+  font-size: 26px;
+  width: 250px;
+}
+.quixDestniPara2 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+  color: #000000;
+  font-size: 12px;
+}
+.quixDestniBtnTxt1 {
+  margin-bottom: 0;
+  background-color: #67e0f1;
+  padding: 15px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  transform: rotate(90deg);
+}
+.quizPopup__content-ResortShareBtn {
+  outline: none;
+  border: none;
+  background-color: #6d6d6d;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.quizMaldImg {
+  width: 350px;
+  height: 150px;
+}
+.malTextMains {
+  padding: 0px 20px;
+}
+.malTextImg {
+  width: 120px;
+  height: 50px;
+}
+.malTextpara1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #737373;
+  font-size: 12px;
+  text-align: justify;
+}
+.malTextpara2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #737373;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.malMain2Img {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.malIslandsss {
+  height: 230px;
+  width: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.malIslandsss img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.malres1Text1 {
+  width: 100px;
+  margin-bottom: 10px;
+}
+.malres2Text2 {
+  width: 120px;
+  height: 23px;
+  margin-bottom: 10px;
+}
+.malMain2Subb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.islandssMainDeta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 35vh;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+.islandssMainDeta img {
+  width: 100%;
+  height: 100%;
+}
+.fuzimaltextMaain {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 260px;
+}
+.fuzimaltextMaainn {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 290px;
+}
+.fuzimaltextImg {
+  width: 250px;
+}
+.oblumaltextImg {
+  width: 250px;
+  height: 40px;
+}
+.fuzimaltextImgPara {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #4d4d50;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.oblumaltextImgPara {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  color: #4d4d50;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.fuziiImgssMainn {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.fuziiImgss {
+  height: 230px;
+  width: 150px;
+}
+.fuziiBtnss button {
+  border: none;
+  outline: none;
+  margin-top: 30px;
+}
+.fuziiBtnss1,
+.fuziiBtnss2,
+.fuziiBtnss3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fuziiBtnss1 {
+  background-color: #8eadc2;
+}
+.fuziiBtnss2 {
+  background-color: #b19777;
+}
+.fuziiBtnss3 {
+  background-color: #80d47d;
 }
